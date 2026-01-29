@@ -2,209 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr. Mueen Uddin – Associate Professor (Data & Cybersecurity)</title>
+  <title>Dr. Mueen Uddin - Associate Professor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      line-height: 1.7;
-      color: #2d3748;
-      background: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6; color: #333; background: #f8f9fa;
     }
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
     
-    /* HEADER - BEAUTIFUL DESIGN */
+    /* HEADER */
     .header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      color: white;
-      text-align: center;
-      padding: 60px 40px;
-      border-radius: 24px;
-      margin-bottom: 40px;
-      box-shadow: 0 25px 50px rgba(30,58,138,0.3);
-      position: relative;
-      overflow: hidden;
+      background: white; text-align: center; padding: 50px 30px;
+      border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
     }
-    .header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-      opacity: 0.3;
-    }
-    
     .profile-pic {
-      width: 160px; height: 160px; border-radius: 50%;
-      border: 6px solid rgba(255,255,255,0.3);
-      margin: 0 auto 30px;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+      border: 4px solid #007bff; margin-bottom: 20px; display: block;
     }
-    .profile-pic:hover { transform: scale(1.05); }
-    
-    .header h1 {
-      font-size: 2.8rem; font-weight: 700; margin-bottom: 15px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-    .header h2 { font-size: 1.3rem; font-weight: 400; margin-bottom: 20px; opacity: 0.95; }
+    h1 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 10px; }
+    .title { font-size: 1.2rem; color: #666; margin-bottom: 15px; }
     .highlight {
-      background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
-      padding: 12px 28px; border-radius: 50px; font-weight: 600;
-      font-size: 1.1rem; display: inline-block; margin: 20px 0;
-      border: 1px solid rgba(255,255,255,0.3);
+      background: #007bff; color: white; padding: 10px 25px;
+      border-radius: 25px; font-weight: 600; display: inline-block;
+      margin: 15px 0;
     }
-    .email { font-size: 1.3rem; font-weight: 500; margin: 25px 0; }
+    .email { font-size: 1.2rem; color: #007bff; font-weight: 500; margin: 20px 0; }
     
-    .social-links p {
-      margin: 15px 0; font-size: 1rem;
+    .social { margin: 20px 0; }
+    .social p { margin: 10px 0; font-size: 0.95rem; }
+    .social strong { color: #333; }
+    .social a { color: #007bff; text-decoration: none; }
+    .social a:hover { text-decoration: underline; }
+    
+    /* NAVIGATION */
+    .nav {
+      display: flex; justify-content: center; gap: 30px; margin: 30px 0;
+      flex-wrap: wrap;
     }
-    .social-links strong { color: #e2e8f0; }
-    .social-links a { color: #bfdbfe; font-weight: 500; text-decoration: none; }
-    .social-links a:hover { color: white; text-decoration: underline; }
+    .nav a {
+      padding: 12px 24px; background: #007bff; color: white;
+      text-decoration: none; border-radius: 25px; font-weight: 500;
+      transition: all 0.3s;
+    }
+    .nav a:hover { background: #0056b3; transform: translateY(-2px); }
     
     /* SECTIONS */
     .section {
-      background: white; border-radius: 20px; padding: 40px;
-      margin-bottom: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-      border-top: 6px solid #3b82f6;
+      background: white; padding: 30px; margin-bottom: 25px;
+      border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-left: 5px solid #007bff;
     }
     .section h2 {
-      font-size: 1.8rem; font-weight: 700; color: #1e293b;
-      margin-bottom: 25px; padding-bottom: 15px;
-      position: relative; border-bottom: 3px solid #e2e8f0;
-    }
-    .section h2::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 80px; height: 4px; background: linear-gradient(90deg, #3b82f6, #1e40af);
-      border-radius: 2px;
+      font-size: 1.5rem; color: #1a1a1a; margin-bottom: 20px;
+      padding-bottom: 10px; border-bottom: 2px solid #e9ecef;
     }
     .section h3 {
-      font-size: 1.3rem; font-weight: 600; color: #1e293b;
-      margin: 30px 0 18px 0;
+      font-size: 1.2rem; color: #1a1a1a; margin: 25px 0 15px 0;
     }
-    .section ul { padding-left: 25px; margin: 20px 0; }
-    .section li { margin-bottom: 14px; }
-    .section strong { color: #1e293b; }
-    .date { color: #64748b; font-size: 0.95rem; font-weight: 500; }
+    .section ul { padding-left: 25px; margin: 15px 0; }
+    .section li { margin-bottom: 10px; }
+    .section strong { color: #1a1a1a; }
     
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .container { padding: 15px; }
-      .header { padding: 40px 25px; }
-      .header h1 { font-size: 2.2rem; }
-      .section { padding: 30px 20px; margin-bottom: 20px; }
-      .profile-pic { width: 130px; height: 130px; }
-    }
+    .date { color: #666; font-size: 0.9rem; }
     
     footer {
-      text-align: center; padding: 40px 20px; color: #64748b;
-      background: white; border-radius: 20px; margin: 40px 0 0 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center; padding: 30px; color: #666;
+      background: white; border-radius: 12px; margin-top: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    
+    @media (max-width: 768px) {
+      .header { padding: 30px 20px; }
+      h1 { font-size: 1.8rem; }
+      .nav { flex-direction: column; align-items: center; }
+      .nav a { margin: 5px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     
-    <!-- FIXED PROFILE HEADER -->
+    <!-- HEADER WITH WORKING PROFILE PIC -->
     <div class="header">
-      <!-- TRY 3 WAYS TO SHOW PROFILE PIC -->
-      <img src="profile.jpg" alt="Dr. Mueen Uddin" class="profile-pic" 
-           onerror="this.src='https://via.placeholder.com/160x160/e3f2fd/4a5568?text=Dr+Mueen'; this.onerror=null;">
+      <!-- TRIPLE FALLBACK SYSTEM -->
+      <img src="profile.jpg" alt="Profile" class="profile-pic" 
+           onerror="this.src='https://via.placeholder.com/150x150/007bff/ffffff?text=Mueen'; 
+                   this.onerror='this.outerHTML=`<div style=`width:150px;height:150px;border-radius:50%;background:#007bff;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:20px;margin:0 auto 20px 0;border:4px solid #007bff;box-shadow:0 5px 15px rgba(0,123,255,0.3)`>Dr M</div>`';">
       
       <h1>Dr Mueen Uddin (Senior Member IEEE)</h1>
-      <h2>Associate Professor (Data and Cybersecurity)<br>
+      <div class="title">Associate Professor (Data and Cybersecurity)<br>
           College of Computing & Information Technology<br>
-          University of Doha for Science & Technology, Doha Qatar</h2>
+          University of Doha for Science & Technology, Doha Qatar</div>
       
-      <p class="highlight">🏆 Top 2% Research Scientists (Stanford & Elsevier 2022-2025)</p>
-      <p class="email">Mueen.malik@ieee.org</p>
+      <div class="highlight">🏆 Top 2% Research Scientists (Stanford & Elsevier 2022-2025)</div>
+      <div class="email">Mueen.malik@ieee.org</div>
       
-      <div class="social-links">
-        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ULNFqZIAAAAJ&hl=en" target="_blank">scholar.google.com/citations?user=ULNFqZIAAAAJ</a></p>
+      <div class="social">
+        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ULNFqZIAAAAJ" target="_blank">scholar.google.com/citations?user=ULNFqZIAAAAJ</a></p>
         <p><strong>ORCID:</strong> <a href="http://orcid.org/0000-0003-1919-3407" target="_blank">orcid.org/0000-0003-1919-3407</a></p>
-        <p><strong>Scopus:</strong> https://www.scopus.com/authid/detail.uri?authorId=42062605100</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mueen-uddin-bbba4b16/" target="_blank">linkedin.com/in/mueen-uddin-bbba4b16</a></p>
+        <p><strong>Scopus:</strong> 42062605100</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mueen-uddin-bbba4b16/" target="_blank">linkedin.com/in/mueen-uddin</a></p>
         <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Mueen-Uddin" target="_blank">researchgate.net/profile/Mueen-Uddin</a></p>
       </div>
     </div>
 
-    <!-- ALL YOUR SECTIONS - FULL CONTENT -->
+    <!-- WORKING NAVIGATION TO YOUR OTHER PAGES -->
+    <div class="nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="teaching.html">👨‍🏫 Teaching</a>
+      <a href="research.html">🔬 Research</a>
+      <a href="services.html">🔧 Services</a>
+    </div>
+
+    <!-- SHORT PREVIEWS OF ALL SECTIONS -->
     <div class="section">
       <h2>📖 Biography</h2>
-      <p>Dr. Mueen Uddin is a distinguished Senior Member of IEEE and a Professional Member of ACM and AIS, with over 15 years of professional experience in research, teaching, and development. Recognized globally for his scholarly contributions, Stanford University and Elsevier listed him among the Top 2% of Research Scientists from 2022 to 2024. Dr. Mueen earned his PhD from Universiti Teknologi Malaysia (UTM) in 2013, following his MS and BS in Computer Science in 2008 and 2005, respectively.</p>
-      <p>His prolific publication record includes 200 peer-reviewed publications in high-impact journals and conferences. His research expertise centers on the security of large-scale distributed systems, encompassing Cloud, Edge, IoT, IoE, IIoT, and Cyber-Physical Systems, as well as emerging technologies such as Blockchain, NFTs, the Metaverse, and Web3.0.</p>
+      <p><strong>Senior Member IEEE</strong> with 15+ years experience in research, teaching, and development. <strong>Top 2% Research Scientist</strong> (Stanford/Elsevier 2022-2025). PhD from Universiti Teknologi Malaysia (2013). Expert in cybersecurity, blockchain, cloud computing, and digital forensics.</p>
     </div>
 
     <div class="section">
-      <h2>🔬 Research Profile Highlights</h2>
+      <h2>🔬 Research Highlights</h2>
       <ul>
-        <li>🏆 Top 2% research scientist (Stanford University and Elsevier reports 2022-2025)</li>
-        <li>📚 200+ publications (180+ in Q1/Q2 journals, Impact Factor >400)</li>
-        <li>📊 Google Scholar: 7500+ citations, h-index 44, i10-index 99</li>
-        <li>📈 Scopus: 4950 citations, h-index 35</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>🏅 Honors, Awards and Recognitions</h2>
-      <ul>
-        <li><strong>Best Researcher Award</strong> - University of Doha for Science and Technology (2024)</li>
-        <li><strong>IEEE P3722 Standard</strong> - Working Group Member (2025-2029)</li>
-        <li><strong>IEEE Xtreme Proctor</strong> - 19.0 (2025) & 18.0 (2024)</li>
-        <li><strong>Outstanding Associate Editor</strong> - IEEE Access (2023)</li>
-        <li><strong>Best Researcher Award</strong> - Effat University (2019)</li>
-      </ul>
-    </div>
-
-    <!-- TEACHING EXPERIENCE -->
-    <div class="section">
-      <h2>👨‍🏫 Teaching Experience and Appointments</h2>
-      <h3>Associate Professor of Data and Cybersecurity <span class="date">Jul 2022 - Present</span></h3>
-      <p>College of Computing & Information Technology, University of Doha for Science & Technology</p>
-      
-      <h3>Honorary Professor Roles <span class="date">2024-2025</span></h3>
-      <ul>
-        <li>University of Lahore, Pakistan | NSIT-IFSCS, India | INTI International University, Malaysia</li>
-      </ul>
-      
-      <h3>Assistant Professor Roles <span class="date">2015-2022</span></h3>
-      <ul>
-        <li>Universiti Brunei Darussalam | Effat University | Universiti Malaysia Pahang</li>
-      </ul>
-    </div>
-
-    <!-- RESEARCH GRANTS -->
-    <div class="section">
-      <h2>💰 International Research Grants</h2>
-      <ul>
-        <li><strong>PI:</strong> "Securing Decentralized Fintech with Blockchain" (Hail University, 2025)</li>
-        <li><strong>PI:</strong> "Q-POPs: Qatar Environmental Monitoring" (QRDI Qatar, 2025)</li>
-        <li><strong>PI:</strong> 5+ grants from Universiti Brunei Darussalam (2021-2022)</li>
-        <li><strong>PI:</strong> Effat University Internal Grants (2016-2019)</li>
-      </ul>
-    </div>
-
-    <!-- ALL OTHER SECTIONS SHORTENED FOR OVERVIEW -->
-    <div class="section">
-      <h2>📋 Professional Memberships</h2>
-      <ul>
-        <li><strong>Senior Member IEEE</strong> (91193698) | IEEE Computer Society | CTSoc</li>
-        <li>ACM | AIS | IAENG | IETI | 15+ international memberships</li>
+        <li>200+ publications, 180+ in Q1/Q2 journals (Impact Factor >400)</li>
+        <li>Google Scholar: 7500+ citations, h-index 44, i10-index 99</li>
+        <li>Scopus: 4950 citations, h-index 35</li>
+        <li>Principal Investigator on 10+ international research grants</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>✍️ Editorial Roles & Conference Service</h2>
+      <h2>🏅 Key Awards</h2>
       <ul>
-        <li>Associate Editor: Scientific Reports, IEEE Access, PLOS ONE, Frontiers</li>
-        <li>Guest Editor: 6 Special Issues (Sustainability, Sensors, Electronics)</li>
-        <li>TPC: 20+ IEEE conferences (2022-2026)</li>
+        <li>Best Researcher Award - UDST Qatar (2024)</li>
+        <li>IEEE Xtreme Proctor (2024, 2025)</li>
+        <li>Outstanding Associate Editor - IEEE Access (2023)</li>
+        <li>Best Researcher - Effat University (2019)</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>👨‍🏫 Current Positions</h2>
+      <h3>Associate Professor <span class="date">2022-Present</span></h3>
+      <p>University of Doha for Science & Technology</p>
+      <h3>Honorary Professor <span class="date">2024-Present</span></h3>
+      <p>University of Lahore | NSIT-IFSCS India | INTI Malaysia</p>
     </div>
 
   </div>
