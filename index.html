@@ -1,124 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dr. Mueen Uddin - Biography</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Dr. Mueen Uddin – Associate Professor (Data & Cybersecurity)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-    header { background: #003366; color: #fff; padding: 20px; }
-    header h1 { margin: 0; }
-    header h2 { margin: 5px 0 10px 0; font-weight: normal; font-size: 1rem; }
-    nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 900px; margin: 20px auto; padding: 0 15px 40px 15px; }
-    h2 { color: #003366; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-    footer { text-align: center; font-size: 0.9rem; color: #666; padding: 20px 0; border-top: 1px solid #eee; }
-    ul { margin-top: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      color: #2d3748;
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    /* HEADER */
+    .header {
+      text-align: center;
+      background: white;
+      border-radius: 20px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #4299e1;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(66,153,225,0.3);
+    }
+    
+    .header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #2d3748, #4a5568);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .header h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #4a5568;
+      margin-bottom: 15px;
+    }
+    
+    .position {
+      font-size: 1.1rem;
+      color: #2d3748;
+      font-weight: 600;
+      background: linear-gradient(135deg, #4299e1, #3182ce);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .highlight {
+      background: linear-gradient(135deg, #48bb78, #38a169);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(72,187,120,0.3);
+    }
+    
+    .contact {
+      margin: 25px 0;
+      font-size: 1.1rem;
+      color: #4a5568;
+    }
+    
+    .social-links {
+      margin-top: 30px;
+    }
+    
+    .social-links p {
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+    
+    .social-links strong {
+      color: #2d3748;
+      font-weight: 600;
+    }
+    
+    .social-links a {
+      color: #4299e1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .social-links a:hover {
+      color: #3182ce;
+      text-decoration: underline;
+    }
+    
+    /* SECTIONS */
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border-top: 4px solid #4299e1;
+    }
+    
+    .section h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #e2e8f0;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, #4299e1, #3182ce);
+      border-radius: 2px;
+    }
+    
+    .section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 25px 0 15px 0;
+    }
+    
+    .section ul {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+    
+    .section li {
+      margin-bottom: 12px;
+      position: relative;
+    }
+    
+    .section li::marker {
+      color: #4299e1;
+      font-weight: bold;
+    }
+    
+    .section strong {
+      color: #2d3748;
+      font-weight: 600;
+    }
+    
+    .date {
+      color: #718096;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container { padding: 20px 15px; }
+      .header { padding: 40px 25px; }
+      .header h1 { font-size: 2rem; }
+      .section { padding: 25px 20px; }
+      .profile-pic { width: 120px; height: 120px; }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #718096;
+      font-size: 0.9rem;
+      background: white;
+      border-radius: 16px;
+      margin-top: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
   </style>
 </head>
 <body>
-<header>
-  <h1>Dr. Mueen Uddin (Senior Member IEEE)</h1>
-  <h2>Associate Professor of Data and Cybersecurity<br>
-      College of Computing &amp; Information Technology,<br>
-      University of Doha for Science &amp; Technology, Qatar</h2>
+  <div class="container">
+    
+    <!-- HEADER SECTION -->
+    <div class="header">
+      <img src="profile.jpg" alt="Dr. Mueen Uddin" class="profile-pic" onerror="this.style.display='none'">
+      
+      <h1>Dr Mueen Uddin (Senior Member IEEE)</h1>
+      <span class="position">Associate Professor (Data and Cybersecurity)</span>
+      <h2>College of Computing & Information Technology<br>University Of Doha For Science & Technology, Doha Qatar</h2>
+      
+      <p class="highlight">Top 2% Research Scientists (Stanford and Elsevier reports 2022, 2023, 2024, 2025)</p>
+      
+      <p class="contact">Mueen.malik@ieee.org</p>
+      
+      <div class="social-links">
+        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ULNFqZIAAAAJ&hl=en" target="_blank">scholar.google.com/citations?user=ULNFqZIAAAAJ</a></p>
+        <p><strong>ORCID:</strong> <a href="http://orcid.org/0000-0003-1919-3407" target="_blank">orcid.org/0000-0003-1919-3407</a></p>
+        <p><strong>Scopus:</strong> 42062605100</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mueen-uddin-bbba4b16/" target="_blank">linkedin.com/in/mueen-uddin-bbba4b16</a></p>
+        <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Mueen-Uddin" target="_blank">researchgate.net/profile/Mueen-Uddin</a></p>
+      </div>
+    </div>
 
-  <nav>
-    <a href="index.html">Biography</a>
-    <a href="research.html">Research</a>
-    <a href="services.html">Service</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
-</header>
-
-<main>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Dr. Mueen Uddin - Biography</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-    header { background: #003366; color: #fff; padding: 20px; }
-    header h1 { margin: 0; }
-    header h2 { margin: 5px 0 10px 0; font-weight: normal; font-size: 1rem; }
-    nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 900px; margin: 20px auto; padding: 0 15px 40px 15px; }
-    h2 { color: #003366; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-    footer { text-align: center; font-size: 0.9rem; color: #666; padding: 20px 0; border-top: 1px solid #eee; }
-    ul { margin-top: 0; }
-  </style>
-</head>
-<body>
-<header>
-  <!-- PROFILE HEADER - UPDATED WITH YOUR EXACT DETAILS -->
-<img src="profile.jpg" alt="Dr. Mueen Uddin" class="profile-pic">
-
-<h1>Dr Mueen Uddin (Senior Member IEEE)</h1>
-<h2>Associate Professor (Data and Cybersecurity)<br>
-<span style="font-weight: normal; color: #666;">College of Computing & Information Technology<br>
-University Of Doha For Science & Technology, Doha Qatar</span></h2>
-
-<p style="font-size: 1.1em; font-weight: 500; margin: 15px 0;">
-<span class="highlight">Top 2% Research Scientists (Stanford and Elsevier reports 2022, 2023 and 2024, 2025)</span>
-</p>
-
-<p class="email">Mueen.malik@ieee.org</p>
-
-<!-- SOCIAL LINKS - SAME FORMAT -->
-<p>
-  <strong>Google Scholar:</strong> 
-  <a href="https://scholar.google.com/citations?user=ULNFqZIAAAAJ&hl=en" target="_blank">
-    scholar.google.com/citations?user=ULNFqZIAAAAJ
-  </a>
-</p>
-<p>
-  <strong>ORCID:</strong> 
-  <a href="http://orcid.org/0000-0003-1919-3407" target="_blank">
-    orcid.org/0000-0003-1919-3407
-  </a>
-</p>
-<p>
-  <strong>Scopus Author ID:</strong> 42062605100
-</p>
-<p>
-  <strong>LinkedIn:</strong> 
-  <a href="https://www.linkedin.com/in/mueen-uddin-bbba4b16/" target="_blank">
-    linkedin.com/in/mueen-uddin-bbba4b16
-  </a>
-</p>
-<p>
-  <strong>ResearchGate:</strong> 
-  <a href="https://https://www.researchgate.net/profile/Mueen-Uddin?ev=hdr_xprf" target="_blank">
-    researchgate.net/profile/YOUR-PROFILE
-  </a>
-</p>
-  <section id="bio">
-  <h2>Biography</h2>
-
-  <p>
-    Dr. Mueen Uddin is a distinguished Senior Member of IEEE and a Professional Member of ACM and AIS, with over 15 years of professional experience in research, teaching, and development. Recognized globally for his scholarly contributions, Stanford University and Elsevier listed him among the Top 2% of Research Scientists from 2022 to 2024. Dr. Mueen earned his PhD from Universiti Teknologi Malaysia (UTM) in 2013, following his MS and BS in Computer Science in 2008 and 2005, respectively. He is currently an Associate Professor of Data & Cybersecurity at the University of Doha for Science and Technology in Qatar. Dr. Mueen has established a strong track record of research and academic leadership, successfully acquiring, managing, and implementing numerous research-funded projects in collaboration with agencies across Malaysia, Saudi Arabia, the UAE, and Brunei Darussalam.
-  </p>
-
-  <p>
-    His prolific publication record includes 200 peer-reviewed publications in high-impact journals and conferences. Dr. Mueen serves in various editorial roles, including Editor, Associate Editor, and Guest Editor, for prestigious journals and conferences. His research expertise centers on the security of large-scale distributed systems, encompassing Cloud, Edge, IoT, IoE, IIoT, and Cyber-Physical Systems, as well as the Security of Healthcare Supply Chain Systems, Healthcare Informatics, and emerging technologies such as Blockchain, NFTs, the Metaverse, and Web3.0. Dr. Mueen's contributions continue to drive innovation in data and cybersecurity, underscoring his commitment to advancing knowledge and shaping the future of digital security.
-  </p>
-</section>
+    <!-- BIOGRAPHY -->
+    <div class="section">
+      <h2>Biography</h2>
+      <p>Dr. Mueen Uddin is a distinguished Senior Member of IEEE and a Professional Member of ACM and AIS, with over 15 years of professional experience in research, teaching, and development. Recognized globally for his scholarly contributions, Stanford University and Elsevier listed him among the Top 2% of Research Scientists from 2022 to 2024. Dr. Mueen earned his PhD from Universiti Teknologi Malaysia (UTM) in 2013, following his MS and BS in Computer Science in 2008 and 2005, respectively. He is currently an Associate Professor of Data & Cybersecurity at the University of Doha for Science and Technology in Qatar. Dr. Mueen has established a strong track record of research and academic leadership, successfully acquiring, managing, and implementing numerous research-funded projects in collaboration with agencies across Malaysia, Saudi Arabia, the UAE, and Brunei Darussalam.</p>
+      <p>His prolific publication record includes 200 peer-reviewed publications in high-impact journals and conferences. Dr. Mueen serves in various editorial roles, including Editor, Associate Editor, and Guest Editor, for prestigious journals and conferences. His research expertise centers on the security of large-scale distributed systems, encompassing Cloud, Edge, IoT, IoE, IIoT, and Cyber-Physical Systems, as well as the Security of Healthcare Supply Chain Systems, Healthcare Informatics, and emerging technologies such as Blockchain, NFTs, the Metaverse, and Web3.0. Dr. Mueen's contributions continue to drive innovation in data and cybersecurity, underscoring his commitment to advancing knowledge and shaping the future of digital security.</p>
+    </div>
 
   <h2>Research Profile Highlights</h2>
   <ul>
     <li>Top 2% research scientist (Stanford University and Elsevier reports 2022, 2023, 2024, 2025).</li>
     <li>Over 200 journal and conference publications, with more than 180 in Q-ranked journals.</li>
     <li>Combined journal impact factor exceeding 400.</li>
-    <li>Google Scholar: over 7500 citations, h-index 44, i10-index 99.</li>
-    <li>Scopus: approximately 4950 citations, h-index 35.</li>
+    <li>Google Scholar: over 7800 citations, h-index 45, i10-index 102.</li>
+    <li>Scopus: approximately 5100 citations, h-index 36.</li>
     <li>Regular collaboration with active research groups in Cybersecurity and Blockchain across multiple universities.</li>
     <li>Principal Investigator on multiple research grants and invited speaker for academic and professional audiences.</li>
   </ul>
